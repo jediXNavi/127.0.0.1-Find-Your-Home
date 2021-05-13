@@ -1,0 +1,4 @@
+IaC/k8s.mak
+IaC/docker.mak
+code/db/app.py
+.DS_Store

@@ -1,0 +1,8 @@
+street address,city,pincode,availability,beds,baths,rent,facilities
+1124 Brick Street,Burnaby,V5G1B7,True,3,2,2400,[Wifi,Electricity,Heating]
+105 Alpen Street,Burnaby,V1A2K5,True,1,1,1800,[Electricity,Heating,Parking]
+98A Maple Ridge,Burnaby,V2K2A9,False,1,1,1100,[Parking]
+210 South Road,Burnaby,K512A9,True,2,2,1500,[Wifi,Parking]
+5928 Spark Street,Burnaby,K510A9,True,1,1,1800,[Wifi]
+7411 Downtown,Burnaby,K55TH3,True,1,1,1500,[Wifi,Heating]
+6 Aldridge Street,Burnaby,V5G1P5,True,2,2,1600,[Heating,Electricity]

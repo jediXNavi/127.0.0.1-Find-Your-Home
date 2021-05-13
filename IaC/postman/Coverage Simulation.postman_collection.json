@@ -1,0 +1,832 @@
+{
+	"info": {
+		"_postman_id": "74b0b69e-f460-4831-934c-8e49228a66db",
+		"name": "Coverage Simulation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Property Service",
+			"item": [
+				{
+					"name": "View Service Request ",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\":\"L_shah\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{property_domain}}/api/v1/property/service_req",
+							"host": [
+								"{{property_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"property",
+								"service_req"
+							]
+						},
+						"description": "Directly testing the API. This API would be called internally by Landlord and Tenant Service"
+					},
+					"response": []
+				},
+				{
+					"name": "View Property Details",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNmQzYmYwYmItNzJlMC00MjgyLWJlY2ItZWViZjA2OWUxOTFlIiwidGltZSI6MTYxMTczOTc3Ny45MTc2MDgzfQ.Dtv_k3KlescdqIeOg36L1rHv8MuHXIx5Mr5lhdt3Q4o",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{property_domain}}/api/v1/property/P_7aa8f0c3-2b7b-4196-b6fd-ce74910cab22",
+							"host": [
+								"{{property_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"property",
+								"P_7aa8f0c3-2b7b-4196-b6fd-ce74910cab22"
+							]
+						},
+						"description": "Directly testing the API. This API would be called internally by Landlord and Tenant Service"
+					},
+					"response": []
+				},
+				{
+					"name": "List Property",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMDI3Yzk5ZWYtM2UxMi00ZmM5LWFhYzgtMTcyZjg3N2MyZDI0IiwidGltZSI6MTYwMTA3NDY0NC44MTIxNjg2fQ.hR5Gbw5t2VMpLcj8yDz1B6tcWsWCFNiHB_KHpvQVNls",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{property_domain}}/api/v1/property/list_prop/Burnaby",
+							"host": [
+								"{{property_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"property",
+								"list_prop",
+								"Burnaby"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View User Property",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMDI3Yzk5ZWYtM2UxMi00ZmM5LWFhYzgtMTcyZjg3N2MyZDI0IiwidGltZSI6MTYwMTA3NDY0NC44MTIxNjg2fQ.hR5Gbw5t2VMpLcj8yDz1B6tcWsWCFNiHB_KHpvQVNls",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{property_domain}}/api/v1/property/user_prop/L_lala",
+							"host": [
+								"{{property_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"property",
+								"user_prop",
+								"L_lala"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tenant Service",
+			"item": [
+				{
+					"name": "Tenant Login",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"jazzyb\",\n    \"password\":\"jazzyb\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tenant_domain}}/api/v1/tenant/login",
+							"host": [
+								"{{tenant_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Service Request",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "user_id",
+								"value": "T_jazzyb2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"property_id\" : \"P_7aa8f0c3-2b7b-4196-b6fd-ce74910cab22\",\r\n     \"query\": \"Bulb\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tenant_domain}}/api/v1/tenant/service_req",
+							"host": [
+								"{{tenant_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								"service_req"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tenant user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMDI3Yzk5ZWYtM2UxMi00ZmM5LWFhYzgtMTcyZjg3N2MyZDI0IiwidGltZSI6MTYwMTA3NDY0NC44MTIxNjg2fQ.hR5Gbw5t2VMpLcj8yDz1B6tcWsWCFNiHB_KHpvQVNls",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"password\" : \"pass123\",\n    \"fname\" : \"Jazzy\",\n    \"lname\" : \"B\",\n    \"email\" : \"jb@gmail.com\",\n    \"contact\" : 3334331343\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tenant_domain}}/api/v1/tenant/T_jazzyb",
+							"host": [
+								"{{tenant_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								"T_jazzyb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Tenant User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"username\" : \"jazzyb\",\n    \"password\" : \"jazzyb\",\n    \"fname\" : \"Jazzy\",\n    \"lname\" : \"B\",\n    \"email\" : \"jb@gmail.com\",\n    \"contact\" : 3334331343\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tenant_domain}}/api/v1/tenant/",
+							"host": [
+								"{{tenant_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								""
+							]
+						},
+						"description": "Create Sherlock Holmes user"
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant Logoff",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiVF9qYXp6eWIiLCJ0aW1lIjoxNjE3NDkzNTU1LjA0NDg4ODd9.uE-9Mu2I3BvmHhWRPa7uw09qrM_Qrue12H1h_RzBOBo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tenant_domain}}/api/v1/tenant/logoff",
+							"host": [
+								"{{tenant_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								"logoff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Service Request",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "user_id",
+								"value": "T_jazzyb",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"property_id\" : \"P_7aa8f0c3-2b7b-4196-b6fd-ce74910cab22\",\r\n     \"query\": \"Bathroom door\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tenant_domain}}/api/v1/tenant/service_req_update/Q_5dc0de1a-8327-440e-beb6-f3d77d2e195e",
+							"host": [
+								"{{tenant_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								"service_req_update",
+								"Q_5dc0de1a-8327-440e-beb6-f3d77d2e195e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tenant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMDI3Yzk5ZWYtM2UxMi00ZmM5LWFhYzgtMTcyZjg3N2MyZDI0IiwidGltZSI6MTYwMTA3NDY0NC44MTIxNjg2fQ.hR5Gbw5t2VMpLcj8yDz1B6tcWsWCFNiHB_KHpvQVNls",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{tenant_domain}}/api/v1/tenant/T_mika",
+							"host": [
+								"{{tenant_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								"T_mika"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Tenant Account",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{tenant_domain}}/api/v1/tenant/T_jazzyb",
+							"host": [
+								"{{tenant_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								"T_jazzyb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant Property Application",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMDI3Yzk5ZWYtM2UxMi00ZmM5LWFhYzgtMTcyZjg3N2MyZDI0IiwidGltZSI6MTYwMTA3NDY0NC44MTIxNjg2fQ.hR5Gbw5t2VMpLcj8yDz1B6tcWsWCFNiHB_KHpvQVNls",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"prop_id\": \"P_test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tenant_domain}}/api/v1/tenant/apply/T_test",
+							"host": [
+								"{{tenant_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								"apply",
+								"T_test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Landlord Service",
+			"item": [
+				{
+					"name": "Create Landlord user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"username\" : \"lala\",\n    \"password\" : \"lala123\",\n    \"fname\" : \"Lala\",\n    \"lname\" : \"Shah\",\n    \"email\" : \"lala@gmail.com\",\n    \"contact\" : 77788866622\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{landlord_domain}}/api/v1/landlord/",
+							"host": [
+								"{{landlord_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"landlord",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Landlord Account",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{tenant_domain}}/api/v1/tenant/T_jazzyb",
+							"host": [
+								"{{tenant_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								"T_jazzyb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updating landlord",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiTF9sYWJyaWUiLCJwYXNzd29yZCI6ImR0IiwidGltZSI6MTYxNjkxMjk1OS4wNTI5MTYzfQ.6_pzb3bAPSKEfRIYFqecwOHZMR7FeHvXg3dQgibQzyU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"password\" : \"lala\",\n    \"fname\" : \"Lala\",\n    \"lname\" : \"Shah\",\n    \"email\" : \"lala@gmail.com\",\n    \"contact\" : 77788866622\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{landlord_domain}}/api/v1/landlord/L_lala",
+							"host": [
+								"{{landlord_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"landlord",
+								"L_lala"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login to Landlord account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"lala\",\n    \"password\":\"lala123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{landlord_domain}}/api/v1/landlord/login",
+							"host": [
+								"{{landlord_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"landlord",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resolve Service Request",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "user_id",
+								"value": "L_999",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"property_id\" : \"P_7aa8f0c3-2b7b-4196-b6fd-ce74910cab22\",\r\n     \"tenant_id\" : \"T_jazzyb\",\r\n     \"resolution\": \"Fixed the bathroom door\",\r\n     \"resolved\": true\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{landlord_domain}}/api/v1/landlord/resolve_req/Q_5dc0de1a-8327-440e-beb6-f3d77d2e195e",
+							"host": [
+								"{{landlord_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"landlord",
+								"resolve_req",
+								"Q_5dc0de1a-8327-440e-beb6-f3d77d2e195e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Property",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "user_id",
+								"value": "L_lala",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "donut",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"street address\": \"1124, Brick Street\",\r\n    \"city\" : \"Burnaby\",\r\n    \"pincode\":\"VXG 12A\",\r\n    \"availability\": true,\r\n    \"beds\": 1,\r\n    \"baths\": 1,\r\n    \"rent\": 1500,\r\n    \"facilities\": \"[Kitchen, Wifi, Parking]\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{landlord_domain}}/api/v1/landlord/property",
+							"host": [
+								"{{landlord_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"landlord",
+								"property"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Landlord",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMDI3Yzk5ZWYtM2UxMi00ZmM5LWFhYzgtMTcyZjg3N2MyZDI0IiwidGltZSI6MTYwMTA3NDY0NC44MTIxNjg2fQ.hR5Gbw5t2VMpLcj8yDz1B6tcWsWCFNiHB_KHpvQVNls",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{landlord_domain}}/api/v1/landlord/L_lala1",
+							"host": [
+								"{{landlord_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"landlord",
+								"L_lala1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Landlord Logoff",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiVF9qYXp6eWIiLCJ0aW1lIjoxNjE3NDkzNTU1LjA0NDg4ODd9.uE-9Mu2I3BvmHhWRPa7uw09qrM_Qrue12H1h_RzBOBo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{landlord_domain}}/api/v1/landlord/logoff",
+							"host": [
+								"{{landlord_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"landlord",
+								"logoff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Property",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMmMwYzlmYTctOGUyNC00ZTc4LWExNmEtNDc0OGU3ZDFlZDhmIiwidGltZSI6MTYxMTc5MTE1OS44MDU2NjY0fQ.FpdafOA538kjb-VB0bLm_0kX-T6aJOcvDVro-inZpM8",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "user_id",
+								"value": "L_lala",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{landlord_domain}}/api/v1/landlord/delprop/P_91ebc872-2e60-4c25-a4a1-ceb9e64ce6d3",
+							"host": [
+								"{{landlord_domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"landlord",
+								"delprop",
+								"P_91ebc872-2e60-4c25-a4a1-ceb9e64ce6d3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "property_domain",
+			"value": "localhost:30002"
+		},
+		{
+			"key": "landlord_domain",
+			"value": "localhost:30001"
+		},
+		{
+			"key": "tenant_domain",
+			"value": "localhost:30003"
+		}
+	]
+}
